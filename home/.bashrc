@@ -148,6 +148,7 @@ alias ll="ls -al --group-directories-first"
 alias p="sudo pacman"
 alias v="vim"
 alias r="ranger"
+alias homesick="ruby ~/.gem/ruby/2.7.0/bin/homesick"
 
 # My custom colors
 wal -i ~/Pictures/wallpapers/wallpaper*.* -a 90 -qen --saturate 0.6
