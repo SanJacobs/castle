@@ -149,6 +149,7 @@ alias p="sudo pacman"
 alias v="vim"
 alias r="ranger"
 alias homesick="ruby ~/.gem/ruby/2.7.0/bin/homesick"
+alias csoundref="surf www.csounds.com/manual/html/"
 
 # My custom colors
 wal -i ~/Pictures/wallpapers/wallpaper*.* -a 90 -qen --saturate 0.6
