@@ -64,5 +64,9 @@ inoremap <F10> <Esc>:Goyo<Enter>
 vnoremap <F10> <Esc>:Goyo<Enter>
 map <F10> <Esc>:Goyo<Enter>
 
+" LaTeX commands
 autocmd FileType bib inoremap ,book @book{<++>,<Enter>title<Space>=<Space>"<++>",<Enter>subtitle<Space>=<Space>"<++>",<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>location<Space>=<Space>"<++>",<Enter>edition<Space>=<Space>"<++>"<Enter><Backspace><Backspace>}<Esc>8k/<++><Enter>"_c4l 
 autocmd FileType tex inoremap " ``"<left>
+
+" CSound commands
+autocmd FileType csound inoremap ,instr instr<Space><Enter><Enter>endin<Esc>2kA
