@@ -40,7 +40,6 @@ autocmd FileType csound,python,bib inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
-inoremap {<CR> {<CR>}<ESC>O
 inoremap < <><Left>
 
 " Spellcheck
