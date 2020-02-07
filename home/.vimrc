@@ -46,6 +46,16 @@ inoremap < <><Left>
 " Spellcheck
 map <F6> :setlocal spell! spelllang=en_us<CR>
 
+" Wordcount
+function! WC()
+    let filename = expand("%")
+    let cmd = "detex " . filename . " | wc -w | tr -d [:space:]"
+    let result = system(cmd)
+    echo result . " words"
+endfunction
+
+command WC call WC()
+
 " Placeholder replacer
 inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
