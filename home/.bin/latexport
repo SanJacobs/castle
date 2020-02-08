@@ -1,0 +1,15 @@
+#!/bin/bash
+
+goal=.tex
+file=$1
+title=${file%$goal}
+
+if [ -e $1 ]
+then
+	pdflatex $1
+	biber $title
+	pdflatex $1
+	pdflatex $1
+else
+	echo $1 is not a recognized file.
+fi
