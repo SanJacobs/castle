@@ -76,6 +76,9 @@ map <F10> <Esc>:Goyo<Enter>
 autocmd FileType bib inoremap ,book @book{<++>,<Enter>title<Space>=<Space>"<++>",<Enter>subtitle<Space>=<Space>"<++>",<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>location<Space>=<Space>"<++>",<Enter>edition<Space>=<Space>"<++>"<Enter><Backspace><Backspace>}<Esc>8k/<++><Enter>"_c4l 
 autocmd FileType tex inoremap " ``"<left>
 autocmd FileType tex inoremap ,c \autocite[][]{}<left>
+autocmd FileType tex inoremap ,sc \section{}<left>
+autocmd FileType tex inoremap ,ssc \subsection{}<left>
+autocmd FileType tex inoremap ,sssc \subsubsection{}<left>
 
 " CSound commands
 autocmd FileType csound inoremap ,instr instr<Space><Enter><Enter>endin<Esc>2kA
