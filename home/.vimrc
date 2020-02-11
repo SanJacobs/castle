@@ -44,6 +44,7 @@ inoremap < <><Left>
 
 " Spellcheck
 map <F6> :setlocal spell! spelllang=en_us<CR>
+map <F5> :setlocal spell! spelllang=nb<CR>
 
 " Wordcount
 function! WC()
