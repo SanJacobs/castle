@@ -82,4 +82,4 @@ autocmd FileType tex inoremap ,ssc \subsection{}<left>
 autocmd FileType tex inoremap ,sssc \subsubsection{}<left>
 
 " CSound commands
-autocmd FileType csound inoremap ,instr instr<Space><Enter><Enter>endin<Esc>2kA
+autocmd FileType csound inoremap ,instr instr<Space><Enter>;<Space>############<Enter>;<Space>###<Space><++><Space>###<Enter>;<Space>############<Enter><Enter><++><Enter><Enter>endin<Esc>7kA
