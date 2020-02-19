@@ -36,7 +36,7 @@ set ww+=<,>
 
 " Auto-close
 autocmd FileType csound,python,bib,text inoremap " ""<left>
-autocmd FileType csound,python,bib,text inoremap ' ''<left>
+autocmd FileType csound,python,bib inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
