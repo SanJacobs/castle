@@ -156,6 +156,7 @@ alias csoundref="surf www.csounds.com/manual/html/"
 #wal -c
 
 # Import the colors.
-. "${HOME}/.cache/wal/colors.sh"
+#. "${HOME}/.cache/wal/colors.sh"
+(cat ~/.cache/wal/sequences &)
 # Create the alias.
 #alias dmen='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
