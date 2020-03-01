@@ -33,6 +33,8 @@ let g:kite_tab_complete=1
 
 " Letting the arrow keys warp to next and previous line
 set ww+=<,>
+" Letting the mouse scroll though the file
+set mouse=a
 
 " Auto-close
 autocmd FileType csound,python,bib,text inoremap " ""<left>
