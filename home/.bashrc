@@ -145,7 +145,7 @@ ex ()
 # My custom commands
 alias l="ls -l --group-directories-first"
 alias ll="ls -al --group-directories-first"
-alias p="sudo pacaur"
+alias p="pacaur"
 alias v="vim"
 alias r="ranger"
 alias homesick="ruby ~/.gem/ruby/2.7.0/bin/homesick"
