@@ -10,6 +10,9 @@
 set number
 set relativenumber
 
+" Letting space-count in tabs follow preferences
+set shiftwidth=0
+
 " Vim-plug auto-install
 if empty(glob('~/.vim/autoload/plug.vim'))
   silent !curl -fLo ~/.vim/autoload/plug.vim --create-dirs
@@ -95,4 +98,4 @@ autocmd FileType tex inoremap ,sssc \subsubsection{}<left>
 autocmd FileType csound inoremap ,instr instr<Space><Enter>;<Space>############<Enter>;<Space>###<Space><++><Space>###<Enter>;<Space>############<Enter><Enter><++><Enter><Enter>endin<Esc>7kA
 
 " Webdev commands
-autocmd FileType html,css,htm,javascript set tabstop=4
+autocmd FileType html,css,htm,javascript set tabstop=4 
