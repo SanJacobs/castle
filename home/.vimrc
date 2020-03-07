@@ -18,10 +18,13 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " Vim-plug section
+packadd! matchit
 call plug#begin('~/.vim/plugged')
 
 Plug 'luisjure/csound-vim'
 Plug 'junegunn/goyo.vim'
+Plug 'tpope/vim-ragtag'
+Plug 'tpope/vim-surround'
 
 call plug#end()
 
@@ -67,6 +70,8 @@ map <Space><Tab> <Esc>/<++><Enter>"_c4l
 if has("autocmd")
   augroup templates
     autocmd BufNewFile *.tex 0r ~/.vim/templates/skeleton.tex
+    autocmd BufNewFile *.html 0r ~/.vim/templates/skeleton.html
+    autocmd BufNewFile *.htm 0r ~/.vim/templates/skeleton.html
   augroup END
 endif
 
@@ -74,6 +79,9 @@ endif
 inoremap <F10> <Esc>:Goyo<Enter>
 vnoremap <F10> <Esc>:Goyo<Enter>
 map <F10> <Esc>:Goyo<Enter>
+
+
+" ### Filetype-specific preferences
 
 " LaTeX commands
 autocmd FileType bib inoremap ,book @book{<++>,<Enter>title<Space>=<Space>"<++>",<Enter>subtitle<Space>=<Space>"<++>",<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>location<Space>=<Space>"<++>",<Enter>edition<Space>=<Space>"<++>"<Enter><Backspace><Backspace>}<Esc>8k/<++><Enter>"_c4l 
@@ -85,3 +93,6 @@ autocmd FileType tex inoremap ,sssc \subsubsection{}<left>
 
 " CSound commands
 autocmd FileType csound inoremap ,instr instr<Space><Enter>;<Space>############<Enter>;<Space>###<Space><++><Space>###<Enter>;<Space>############<Enter><Enter><++><Enter><Enter>endin<Esc>7kA
+
+" Webdev commands
+autocmd FileType html,css,htm,javascript set tabstop=4
