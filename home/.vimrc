@@ -96,6 +96,7 @@ autocmd FileType tex inoremap ,sssc \subsubsection{}<left>
 
 " CSound commands
 autocmd FileType csound inoremap ,instr instr<Space><Enter>;<Space>############<Enter>;<Space>###<Space><++><Space>###<Enter>;<Space>############<Enter><Enter><++><Enter><Enter>endin<Esc>7kA
+autocmd FileType csound set tabstop=4 
 
 " Webdev commands
 autocmd FileType html,css,htm,javascript set tabstop=4 
