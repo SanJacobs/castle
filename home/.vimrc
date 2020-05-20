@@ -100,3 +100,7 @@ autocmd FileType csound set tabstop=4
 
 " Webdev commands
 autocmd FileType html,css,htm,javascript set tabstop=4 
+
+" Python commands
+autocmd FileType python map <buffer> <F8> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
+autocmd FileType python imap <buffer> <F8> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>

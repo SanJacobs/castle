@@ -148,7 +148,8 @@ alias ll="ls -al --group-directories-first"
 alias p="pacaur"
 alias v="vim"
 alias r="ranger"
-alias homesick="ruby ~/.gem/ruby/2.7.0/bin/homesick"
+alias pwdd='printf "%q\n" "$(pwd)'
+#alias homesick="ruby ~/.gem/ruby/2.7.0/bin/homesick"
 alias csoundref="surf www.csounds.com/manual/html/"
 
 # My custom colors
@@ -157,6 +158,6 @@ alias csoundref="surf www.csounds.com/manual/html/"
 
 # Import the colors.
 #. "${HOME}/.cache/wal/colors.sh"
-(cat ~/.cache/wal/sequences &)
+# (cat ~/.cache/wal/sequences &)
 # Create the alias.
 #alias dmen='dmenu_run -nb "$color0" -nf "$color15" -sb "$color1" -sf "$color15"'
