@@ -29,6 +29,7 @@ Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-surround'
 Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
 
 call plug#end()
 
@@ -86,6 +87,7 @@ map <F10> <Esc>:Goyo<Enter>
 " Don't forget to install the patched fonts!
 " https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
+let g:airline_theme='deus'
 
 " ### Filetype-specific preferences
 
