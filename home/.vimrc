@@ -28,6 +28,7 @@ Plug 'luisjure/csound-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-surround'
+Plug 'vim-airline/vim-airline'
 
 call plug#end()
 
@@ -39,8 +40,6 @@ let g:kite_tab_complete=1
 
 " Letting the arrow keys warp to next and previous line
 set ww+=<,>
-" Letting the mouse scroll though the file
-set mouse=a
 
 " Auto-close
 autocmd FileType csound,python,bib,text inoremap " ""<left>
@@ -83,6 +82,10 @@ inoremap <F10> <Esc>:Goyo<Enter>
 vnoremap <F10> <Esc>:Goyo<Enter>
 map <F10> <Esc>:Goyo<Enter>
 
+" Airline setup
+" Don't forget to install the patched fonts!
+" https://github.com/powerline/fonts
+let g:airline_powerline_fonts = 1
 
 " ### Filetype-specific preferences
 
