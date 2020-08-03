@@ -10,8 +10,21 @@
 set number
 set relativenumber
 
-" Letting space-count in tabs follow preferences
-set shiftwidth=0
+" Some nice basics
+set noerrorbells
+set smartcase
+set incsearch
+set noswapfile
+
+" Tab settings
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set smartindent
+inoremap <CR> <CR>x<BS>
+inoremap <CR> <CR>x<BS>
+nnoremap o ox<BS>
+nnoremap O Ox<BS>
 
 " Vim-plug auto-install
 if empty(glob('~/.vim/autoload/plug.vim'))
