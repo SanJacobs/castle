@@ -28,6 +28,7 @@ Plug 'luisjure/csound-vim'
 Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 

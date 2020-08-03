@@ -37,6 +37,9 @@ colors() {
 
 [ -r /usr/share/bash-completion/bash_completion ] && . /usr/share/bash-completion/bash_completion
 
+# Fixing 256-color in tmux
+export TERM=xterm-256color
+
 # Change the window title of X terminals
 case ${TERM} in
 	xterm*|rxvt*|Eterm*|aterm|kterm|gnome*|interix|konsole*)
@@ -146,7 +149,7 @@ ex ()
 alias l="ls -l --group-directories-first"
 alias ll="ls -al --group-directories-first"
 alias p="pacaur"
-alias v="vim"
+alias v="nvim"
 alias r="ranger"
 alias pwdd='printf "%q\n" "$(pwd)'
 #alias homesick="ruby ~/.gem/ruby/2.7.0/bin/homesick"
