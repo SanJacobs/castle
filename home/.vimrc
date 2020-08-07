@@ -10,8 +10,30 @@
 set number
 set relativenumber
 
-" Letting space-count in tabs follow preferences
-set shiftwidth=0
+" Some nice basics
+set noerrorbells
+set smartcase
+set incsearch
+set noswapfile
+set undodir=~/.vim/undodir
+set undofile
+
+" Making it possible to move between buffers
+let mapleader = " "
+nnoremap <leader>h :wincmd h<CR>
+nnoremap <leader>j :wincmd j<CR>
+nnoremap <leader>k :wincmd k<CR>
+nnoremap <leader>l :wincmd l<CR>
+
+" Tab settings
+set softtabstop=4
+set tabstop=4
+set shiftwidth=4
+set smartindent
+inoremap <CR> <CR>x<BS>
+inoremap <CR> <CR>x<BS>
+nnoremap o ox<BS>
+nnoremap O Ox<BS>
 
 " Vim-plug auto-install
 if empty(glob('~/.vim/autoload/plug.vim'))
@@ -31,6 +53,7 @@ Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
+Plug 'mbbill/undotree'
 
 call plug#end()
 
@@ -39,6 +62,9 @@ let g:kite_auto_complete=1
 let g:kite_tab_complete=1
 " set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
 " set laststatus=2
+
+" Undo tree
+nnoremap <leader>z :UndotreeShow<CR>
 
 " Letting the arrow keys warp to next and previous line
 set ww+=<,>
@@ -63,7 +89,7 @@ function! WC()
     echo result . " words"
 endfunction
 
-command WC call WC()
+"command WC call WC()
 
 " Placeholder replacer
 inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
