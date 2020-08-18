@@ -43,7 +43,6 @@ if empty(glob('~/.vim/autoload/plug.vim'))
 endif
 
 " Vim-plug section
-packadd! matchit
 call plug#begin('~/.vim/plugged')
 
 Plug 'luisjure/csound-vim'
@@ -54,6 +53,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
+Plug 'morhetz/gruvbox'
 
 call plug#end()
 
@@ -115,6 +115,10 @@ map <F10> <Esc>:Goyo<Enter>
 " https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
+
+" Setting the theme
+set background=dark
+colorscheme gruvbox
 
 " ### Filetype-specific preferences
 
