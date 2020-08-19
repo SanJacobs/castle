@@ -25,6 +25,9 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+" Clear search highlight
+nnoremap <leader>n :noh<CR>
+
 " Tab settings
 set softtabstop=4
 set tabstop=4
