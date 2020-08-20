@@ -63,6 +63,8 @@ call plug#end()
 " Kite and autocomplete setup
 let g:kite_auto_complete=1
 let g:kite_tab_complete=1
+let g:kite_supported_languages = ['python']
+nnoremap <leader>d :KiteGotoDefinition<CR>
 " set statusline=%<%f\ %h%m%r%{kite#statusline()}%=%-14.(%l,%c%V%)\ %P
 " set laststatus=2
 
@@ -122,6 +124,7 @@ let g:airline_theme='deus'
 " Setting the theme
 set background=dark
 colorscheme gruvbox
+hi Normal guibg=NONE ctermbg=NONE
 
 " ### Filetype-specific preferences
 
