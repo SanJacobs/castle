@@ -28,6 +28,11 @@ nnoremap <leader>l :wincmd l<CR>
 " Clear search highlight
 nnoremap <leader>n :noh<CR>
 
+" Git shortcuts
+nnoremap <leader>gs :Gstatus<CR>
+nnoremap <leader>gc :Gcommit<CR>
+nnoremap <leader>gp :Gpush<CR>
+
 " Tab settings
 set softtabstop=4
 set tabstop=4
