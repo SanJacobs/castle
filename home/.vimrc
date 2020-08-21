@@ -126,6 +126,7 @@ map <F10> <Esc>:Goyo<Enter>
 " https://github.com/powerline/fonts
 let g:airline_powerline_fonts = 1
 let g:airline_theme='deus'
+let g:airline#extensions#hunks#enabled=0
 
 " Setting the theme
 set background=dark
