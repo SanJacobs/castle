@@ -69,6 +69,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
+Plug 'rakr/vim-one'
 Plug 'mhinz/vim-signify'
 
 call plug#end()
