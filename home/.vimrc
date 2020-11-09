@@ -25,6 +25,13 @@ nnoremap <leader>j :wincmd j<CR>
 nnoremap <leader>k :wincmd k<CR>
 nnoremap <leader>l :wincmd l<CR>
 
+" Ability to move lines up and down when selected
+vnoremap J :m '>+1<CR>gv=gv
+vnoremap K :m '<-2<CR>gv=gv
+
+" Search and replace
+nnoremap <leader>r :%s///gc<Left><Left><Left><Left>
+
 " Clear search highlight
 nnoremap <leader>n :noh<CR>
 
