@@ -144,6 +144,7 @@ hi Normal guibg=NONE ctermbg=NONE
 " ### Filetype-specific preferences
 
 " LaTeX commands
+autocmd FileType tex map <buffer> <F8> :w<CR>:exec '!latexmk -pdf' shellescape(@%, 1)<CR><CR>
 autocmd FileType bib inoremap ,book @book{<++>,<Enter>title<Space>=<Space>"<++>",<Enter>subtitle<Space>=<Space>"<++>",<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>location<Space>=<Space>"<++>",<Enter>edition<Space>=<Space>"<++>"<Enter><Backspace><Backspace>}<Esc>8k/<++><Enter>"_c4l 
 autocmd FileType tex inoremap " ``"<left>
 autocmd FileType tex inoremap ,c \autocite[][]{}<left>
