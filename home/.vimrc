@@ -103,12 +103,10 @@ map <F5> :setlocal spell! spelllang=nb<CR>
 " Wordcount
 function! WC()
     let filename = expand("%")
-    let cmd = "detex " . filename . " | wc -w | tr -d [:space:]"
+    let cmd = "detex " . filename . " | wc -w"
     let result = system(cmd)
     echo result . " words"
 endfunction
-
-"command WC call WC()
 
 " Placeholder replacer
 inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
@@ -144,6 +142,7 @@ hi Normal guibg=NONE ctermbg=NONE
 " ### Filetype-specific preferences
 
 " LaTeX commands
+autocmd FileType tex command WC call WC()
 autocmd FileType tex map <buffer> <F8> :w<CR>:exec '!latexmk -pdf' shellescape(@%, 1)<CR><CR>
 autocmd FileType bib inoremap ,book @book{<++>,<Enter>title<Space>=<Space>"<++>",<Enter>subtitle<Space>=<Space>"<++>",<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>location<Space>=<Space>"<++>",<Enter>edition<Space>=<Space>"<++>"<Enter><Backspace><Backspace>}<Esc>8k/<++><Enter>"_c4l 
 autocmd FileType tex inoremap " ``"<left>
