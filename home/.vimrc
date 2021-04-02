@@ -5,7 +5,6 @@
 "  (_)___/_/_/ /_/ /_/_/   \___/  
 "                                 
 
-
 " Enableing relative and absolute numberes
 set number
 set relativenumber
@@ -40,11 +39,21 @@ nnoremap <leader>gs :Gstatus<CR>
 nnoremap <leader>gc :Gcommit<CR>
 nnoremap <leader>gp :Gpush<CR>
 
+" Random shit VimWiki wants
+set nocompatible
+filetype plugin on
+syntax on
+
+" Insert datestamp
+nmap <F3> i<C-R>=strftime("%Y-%m-%d")<CR><Esc>
+imap <F3> <C-R>=strftime("%Y-%m-%d")<CR>
+
 " Tab settings
 set softtabstop=4
 set tabstop=4
 set shiftwidth=4
 set smartindent
+set noexpandtab
 inoremap <CR> <CR>x<BS>
 inoremap <CR> <CR>x<BS>
 nnoremap o ox<BS>
@@ -61,7 +70,6 @@ endif
 call plug#begin('~/.vim/plugged')
 
 Plug 'luisjure/csound-vim'
-Plug 'junegunn/goyo.vim'
 Plug 'tpope/vim-ragtag'
 Plug 'tpope/vim-surround'
 Plug 'tpope/vim-fugitive'
@@ -71,6 +79,9 @@ Plug 'mbbill/undotree'
 Plug 'morhetz/gruvbox'
 Plug 'rakr/vim-one'
 Plug 'mhinz/vim-signify'
+Plug 'dense-analysis/ale'
+Plug 'frazrepo/vim-rainbow'
+Plug 'vimwiki/vimwiki'
 
 call plug#end()
 
@@ -89,12 +100,13 @@ nnoremap <leader>z :UndotreeShow<CR>
 set ww+=<,>
 
 " Auto-close
-autocmd FileType csound,python,bib,text inoremap " ""<left>
-autocmd FileType csound,python,bib inoremap ' ''<left>
+autocmd FileType cpp,csound,python,bib,text inoremap " ""<left>
+autocmd FileType cpp,csound,python,bib inoremap ' ''<left>
 inoremap ( ()<left>
 inoremap [ []<left>
 inoremap { {}<left>
 inoremap < <><Left>
+autocmd FileType cpp inoremap < <
 
 " Spellcheck
 map <F6> :setlocal spell! spelllang=en_us<CR>
@@ -105,7 +117,7 @@ function! WC()
     let filename = expand("%")
     let cmd = "detex " . filename . " | wc -w"
     let result = system(cmd)
-    echo result . " words"
+    echo result
 endfunction
 
 " Placeholder replacer
@@ -121,11 +133,6 @@ if has("autocmd")
     autocmd BufNewFile *.htm 0r ~/.vim/templates/skeleton.html
   augroup END
 endif
-
-" Goyo toggle
-inoremap <F10> <Esc>:Goyo<Enter>
-vnoremap <F10> <Esc>:Goyo<Enter>
-map <F10> <Esc>:Goyo<Enter>
 
 " Airline setup
 " Don't forget to install the patched fonts!
@@ -161,4 +168,11 @@ autocmd FileType html,css,htm,javascript set tabstop=4
 " Python commands
 autocmd FileType python map <buffer> <F8> :w<CR>:exec '!python3' shellescape(@%, 1)<CR>
 autocmd FileType python imap <buffer> <F8> <esc>:w<CR>:exec '!python3' shellescape(@%, 1)<CR>
-autocmd FileType python set colorcolumn=80
+
+" C++ commands
+autocmd FileType cpp map <F8> :w<CR>:make debug<CR>
+autocmd FileType cpp imap <F8> <esc>:w<CR>:make debug<CR>
+autocmd FileType cpp map <F9> :w<CR>:make release<CR>
+autocmd FileType cpp imap <F9> <esc>:w<CR>:make release<CR>
+autocmd FileType cpp imap {<CR> {<CR><CR>}<Up><Right>
+set errorformat^=%-G%f:%l:\ warning:%m
