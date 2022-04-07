@@ -82,6 +82,7 @@ Plug 'mhinz/vim-signify'
 Plug 'dense-analysis/ale'
 Plug 'frazrepo/vim-rainbow'
 Plug 'vimwiki/vimwiki'
+Plug 'ctrlpvim/ctrlp.vim'
 
 call plug#end()
 
