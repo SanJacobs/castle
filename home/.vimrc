@@ -35,9 +35,8 @@ nnoremap <leader>r :%s///gc<Left><Left><Left><Left>
 nnoremap <leader>n :noh<CR>
 
 " Git shortcuts
-nnoremap <leader>gs :Gstatus<CR>
-nnoremap <leader>gc :Gcommit<CR>
-nnoremap <leader>gp :Gpush<CR>
+nnoremap <leader>gs :Git<CR>
+nnoremap <leader>gp :Git push<CR>
 
 " Random shit VimWiki wants
 set nocompatible
