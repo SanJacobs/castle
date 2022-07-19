@@ -82,6 +82,7 @@ Plug 'dense-analysis/ale'
 Plug 'frazrepo/vim-rainbow'
 Plug 'vimwiki/vimwiki'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'evanleck/vim-svelte'
 
 call plug#end()
 
@@ -93,6 +94,9 @@ let g:ctrlp_custom_ignore = {
 
 " Undo tree
 nnoremap <leader>z :UndotreeShow<CR>
+
+" Clang Complete
+let g:clang_library_path='/usr/lib/llvm-11/lib'
 
 " Letting the arrow keys warp to next and previous line
 set ww+=<,>
@@ -150,6 +154,7 @@ hi Normal guibg=NONE ctermbg=NONE
 autocmd FileType tex command WC call WC()
 autocmd FileType tex map <buffer> <F8> :w<CR>:exec '!latexmk -pdf' shellescape(@%, 1)<CR><CR>
 autocmd FileType bib inoremap ,book @book{<++>,<Enter>title<Space>=<Space>"<++>",<Enter>subtitle<Space>=<Space>"<++>",<Enter>author<Space>=<Space>"<++>",<Enter>year<Space>=<Space>"<++>",<Enter>publisher<Space>=<Space>"<++>",<Enter>location<Space>=<Space>"<++>",<Enter>edition<Space>=<Space>"<++>"<Enter><Backspace><Backspace>}<Esc>8k/<++><Enter>"_c4l 
+autocmd FileType bib inoremap ,online @online{<++>,<Enter>title<Space>=<Space>{<++>},<Enter>subtitle<Space>=<Space>{<++>},<Enter>author<Space>=<Space>{<++>},<Enter>organization<Space>=<Space>{<++>},<Enter>url<Space>=<Space>{<++>},<Enter>urldate<Space>=<Space>{<++>},<Enter>date<Space>=<Space>{<++>}<Enter><Backspace>}<Esc>8k/<++><Enter>"_c4l
 autocmd FileType tex inoremap " ``"<left>
 autocmd FileType tex inoremap ,c \autocite[][]{}<left>
 autocmd FileType tex inoremap ,sc \section{}<left>
