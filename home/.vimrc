@@ -145,8 +145,8 @@ let g:airline#extensions#hunks#enabled=0
 
 " Setting the theme
 set background=dark
-colorscheme gruvbox
-hi Normal guibg=NONE ctermbg=NONE
+"colorscheme gruvbox
+"hi Normal guibg=NONE ctermbg=NONE
 
 " ### Filetype-specific preferences
 
