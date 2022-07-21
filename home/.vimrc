@@ -123,7 +123,7 @@ function! WC()
 endfunction
 
 " Placeholder replacer
-inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
+"inoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 vnoremap <Space><Tab> <Esc>/<++><Enter>"_c4l
 map <Space><Tab> <Esc>/<++><Enter>"_c4l
 
