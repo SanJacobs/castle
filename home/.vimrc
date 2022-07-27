@@ -83,6 +83,9 @@ Plug 'frazrepo/vim-rainbow'
 Plug 'vimwiki/vimwiki'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'evanleck/vim-svelte'
+Plug 'sheerun/vim-polyglot'
+Plug 'blackbirdtheme/vim'
+Plug 'tpope/vim-vividchalk'
 
 call plug#end()
 
@@ -97,6 +100,8 @@ nnoremap <leader>z :UndotreeShow<CR>
 
 " Clang Complete
 let g:clang_library_path='/usr/lib/llvm-11/lib'
+let g:clang_auto_select = 1
+let g:clang_close_preview = 1
 
 " Letting the arrow keys warp to next and previous line
 set ww+=<,>
@@ -145,8 +150,21 @@ let g:airline#extensions#hunks#enabled=0
 
 " Setting the theme
 set background=dark
-"colorscheme gruvbox
-"hi Normal guibg=NONE ctermbg=NONE
+colorscheme	one
+hi Normal guibg=NONE ctermbg=NONE
+hi SignColumn guibg=NONE ctermbg=NONE
+hi Pmenu ctermfg=White guifg=#f0f0f0
+hi PmenuSel ctermfg=White guifg=#f0f0f0
+hi DiffAdd guibg=NONE ctermbg=NONE
+hi DiffChange guibg=NONE ctermbg=NONE
+hi DiffDelete guibg=NONE ctermbg=NONE
+hi DiffText guibg=NONE ctermbg=NONE
+hi GitGutterAdd guibg=NONE ctermbg=NONE
+hi GitGutterChange guibg=NONE ctermbg=NONE
+hi GitGutterChangeDelete guibg=NONE ctermbg=NONE
+hi GitGutterDelete guibg=NONE ctermbg=NONE
+hi GitGutterDeleteChange guibg=NONE ctermbg=NONE
+
 
 " ### Filetype-specific preferences
 
